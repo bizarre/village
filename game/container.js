@@ -7,16 +7,7 @@ class GameContainer {
       this.speed = speed
       this.debug = debug
       this.game = new Game("game", this, 4)
-      this.touchX = null
-      this.touchY = null
 
-      document.getElementById("restart").addEventListener('click', () => {this.game.reset()}); 
-
-
-      const tileImages = document.getElementsByClassName("tileImage");
-      for(var i=0; i < tileImages.length; i++) {
-        tileImages[i].addEventListener('change',  this.game.updateImageDict(), true); 
-      }
     }
 
     async start () {
